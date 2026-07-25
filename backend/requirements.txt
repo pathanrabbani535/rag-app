@@ -3,7 +3,7 @@ uvicorn
 langchain
 langchain-community
 langchain-core
-langchain_text-splitters
+langchain-text-splitters
 langchain-openai
 faiss-cpu
 sentence-transformers
