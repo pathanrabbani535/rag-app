@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import router as api_router
 from app.core.config import settings
 import os
+import uvicorn
 
 app = FastAPI(title="Professional RAG App API", version="1.0.0")
 
@@ -30,5 +31,6 @@ async def health():
 os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))  # use Render's PORT
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
