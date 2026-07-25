@@ -6,8 +6,8 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str
 
     # Paths
-    FAISS_INDEX_PATH: str = "backend/data/faiss_index"
-    UPLOAD_DIR: str = "backend/uploads"
+    FAISS_INDEX_PATH: str = "data/faiss_index"
+    UPLOAD_DIR: str = "uploads"
 
     # RAG Params
     CHUNK_SIZE: int = 1000
