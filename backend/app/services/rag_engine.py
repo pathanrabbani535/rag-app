@@ -3,8 +3,6 @@ from typing import List, Tuple
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
 from app.core.config import settings
 
 class RAGEngine:
